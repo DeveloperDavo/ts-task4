@@ -16,10 +16,10 @@ Write the following queries:
    select * from Buyer order by creationDate DESC limit 10;
    ```
 
-1. Select the most recent 10 Buyers having two email addresses and display the email ad-dresses only.
+1. Select the most recent 10 Buyers having two email addresses and display the email addresses only.
 
    ```sql
-   select email from BuyerEmail inner join Buyer on BuyerEmail.buyer_id = Buyer.id group by email having count(*) > 1 order by Buyer.creationDate desc limit 10;
+   select email from BuyerEmail inner join Buyer on BuyerEmail.buyer_id = Buyer.id group by email having count(*) = 2 order by Buyer.creationDate desc limit 10;
    ```
 
 1. Select 20 Buyers having done a shop review (Table: BuyerShopReview)
